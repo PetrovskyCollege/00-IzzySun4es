@@ -1,26 +1,99 @@
 @import url("https://fonts.googleapis.com/css?family=Lacquer|Nunito&display=swap");
-body{
-    margin: 0;
-    padding: 0;
+:root{
+  font-size: 24px;
+  --green-color: #00AE26;
 }
 * {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-  }
-.contsiner{
-  width: 1440px;
-  max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
 }
-.navbar, .links{
+body{
+  background-image: url("../img/body-fon.svg");
+  background-size: no-repeat;
+  background-size: cover;
+
+}
+.container{
+  width: 940px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+/*Меню*/
+.navbar{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
-.links li{
+.navbar-left, .navbar-right{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px
+}
+/*Меню ссылки*/
+.navbar-left li{
   list-style: none;
-  gap: 10px;
+  font-size: 0.7rem;
 }
-.links a{
+.navbar-left a{
   text-decoration: none;
   color: black;
 }
+.logo h2{
+  font-family: 'Lacquer', sans-serif;
+}
+.navbar-left a:hover, .navbar-right button:hover{
+  color: var(--green-color);
+}
+/*Меню кнопки: Войти, Зарегистрироваться*/
+.navbar-right button, .mobile-menu-list button{
+  border: none;
+  background: none;
+  font-size: 0.7rem;
+  gap: 20px;
+  cursor: pointer;
+}
+/* Бургер-меню */
+.mobile-menu{
+  display: none;
+  font-size: 0.7rem;
+  margin-top: 10px;
+}
+.mobile-menu li{
+  list-style: none;
+}
+.mobile-menu a{
+  text-decoration: none;
+  color: black;
+}
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  top: 20px;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: 0.4s;
+}
+@media (max-width: 700px) {
+  .container{
+    max-width: 90%;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-left, .navbar-right {
+      display: none;
+  }
+}
+/*Бургер*/

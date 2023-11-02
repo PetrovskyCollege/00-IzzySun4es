@@ -11,28 +11,35 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header id="nav">
             <div class="navbar">
                 <div class="logo">
-                  <h2>EDA.RU</h2>
+                    <h2>EDA.RU</h2>
                 </div>
-                <ul class="links">
-                  <li><a href="#">Главная</a></li>
-                  <li><a href="#">Рецепты</a></li>
-                  <li><a href="#">Авторы</a></li>
-                  <li><a href="#">База</a></li>
+                <button class="navbar-toggle" onclick="toggleMenu()">&#9776;</button>
+                <ul class="navbar-left">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Рецепты</a></li>
+                    <li><a href="#">Авторы</a></li>
+                    <li><a href="#">База</a></li>
                 </ul>
-                <div class="right">
+                <div class="navbar-right">
                     <button>Войти</button>
                     <button>Зарегистрироваться</button>
                 </div>
-                <div class="toggle">
-                  <div class="line1"></div>
-                  <div class="line2"></div>
-                  <div class="line3"></div>
-                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-menu-list">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Рецепты</a></li>
+                    <li><a href="#">Авторы</a></li>
+                    <li><a href="#">База</a></li>
+                    <li><button>Войти</button></li>
+                    <li><button>Зарегистрироваться</button></li>
+                </ul>
             </div>
         </header>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
